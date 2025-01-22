@@ -11,11 +11,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const WorkoutSummary = () => {
 
   return (
+    <>
     <ImageBackground source={background} style = {styles.container}>
-      <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView></SafeAreaView>
       <View style = {styles.sum}>
         <View style = {styles.date}>
-          <Feather style={styles.sun} name="sun" size={26} color="white" />
+          <Feather style={styles.sun} name="sun" size={23} color="white" />
           <Text style = {styles.sumTxt1}>Monday, Sept 16</Text>
         </View>
         <Text style = {styles.sumTxt2}>Workout Summary</Text>
@@ -30,8 +31,8 @@ const WorkoutSummary = () => {
         <TouchableOpacity activeOpacity={0.75} style={styles.button}>
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
-      </SafeAreaView>
     </ImageBackground>
+    </>
   )
 }
 
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
       height:"10%",
       marginBottom:"5%",
       marginTop:'9%',
-
+      marginLeft:"5%"
     },
     sumTxt1:{
       color:"white",
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
       alignItems:"center",
       flexDirection:"row",
       marginBottom:"3%",
-      width:"85%",
+      width:"95%",
     },
     button:{
         width:330,
